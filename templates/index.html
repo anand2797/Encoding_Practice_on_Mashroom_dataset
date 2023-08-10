@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mushroom Classification</title>
+
+</head>
+<body>
+    <h1>Mushroom Classification</h1>
+
+    <form action="/predict" method="post">
+        <div>
+            <label for="cap_shape">Cap Shape:</label>
+            <select name="cap_shape" id="cap_shape">
+                {% for value in cap_shape_values %}
+                <option value="{{ value }}">{{ value }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <br>
+        <div>
+            <label for="cap_surface">Cap Surface:</label>
+            <select name="cap_surface" id="cap_surface">
+                {% for value in cap_surface_values %}
+                <option value="{{ value }}">{{ value }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <br>
+        <div>
+            <label for="cap_color">Cap Color:</label>
+            <select name="cap_color" id="cap_color">
+                {% for value in cap_color_values %}
+                <option value="{{ value }}">{{ value }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <br>
+        <div>
+            <label for="bruises">Bruises:</label>
+            <select name="bruises" id="bruises">
+                {% for value in bruises_values %}
+                <option value="{{ value }}">{{ value }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <br>
+        <div>
+            <label for="odor">Odor:</label>
+            <select name="odor" id="odor">
+                {% for value in odor_values %}
+                <option value="{{ value }}">{{ value }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <br>
+        <div>
+            <label for="gill_attachment">Gill Attactment:</label>
+            <select name="gill_attachment" id="gill_attachment">
+                {% for value in gill_attachment_values %}
+                <option value="{{ value }}">{{ value }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <br>
+        <div>
+            <label for="gill_spacing">Gill Spacing:</label>
+            <select name="gill_spacing" id="gill_spacing">
+                {% for value in gill_spacing_values %}
+                <option value="{{ value }}">{{ value }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <br>
+        <div>
+            <label for="gill_size">Gill Size:</label>
+            <select name="gill_size" id="gill_size">
+                {% for value in gill_size_values %}
+                <option value="{{ value }}">{{ value }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <br>
+        <div>
+            <label for="gill_color">Gill Color:</label>
+            <select name="gill_color" id="gill_color">
+                {% for value in gill_color_values %}
+                <option value="{{ value }}">{{ value }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <br>
+        <div>
+            <label for="stalk_shape">Stalk Shape:</label>
+            <select name="stalk_shape" id="stalk_shape">
+                {% for value in stalk_shape_values %}
+                <option value="{{ value }}">{{ value }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <br>
+        <div>
+            <label for="stalk_root">Stalk Root:</label>
+            <select name="stalk_root" id="stalk_root">
+                {% for value in stalk_root_values %}
+                <option value="{{ value }}">{{ value }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <br>
+        <div>
+            <label for="stalk_surface_above_ring">Stalk Surface Above Ring:</label>
+            <select name="stalk_surface_above_ring" id="stalk_surface_above_ring">
+                {% for value in stalk_surface_above_ring_values %}
+                <option value="{{ value }}">{{ value }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <br>
+        <div>
+            <label for="stalk_surface_below_ring">Stalk Surface Below Ring:</label>
+            <select name="stalk_surface_below_ring" id="stalk_surface_below_ring">
+                {% for value in stalk_surface_below_ring_values %}
+                <option value="{{ value }}">{{ value }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <br>
+        <div>
+            <label for="stalk_color_above_ring">Stalk Color Above Ring:</label>
+            <select name="'stalk_color_above_ring" id="stalk_color_above_ring">
+                {% for value in stalk_color_above_ring_values %}
+                <option value="{{ value }}">{{ value }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <br>
+        <div>
+            <label for="stalk_color_below_ring">Stalk Color Below Ring:</label>
+            <select name="stalk_color_below_ring" id="stalk_color_below_ring">
+                {% for value in stalk_color_below_ring_values %}
+                <option value="{{ value }}">{{ value }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <br>
+        <div>
+            <label for="veil_type">Veil Type:</label>
+            <select name="veil_type" id="veil_type">
+                {% for value in veil_type_values %}
+                <option value="'{{ value }}">{{ value }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <br>
+        <div>
+            <label for="veil_color">Veil Color:</label>
+            <select name="veil_color" id="veil_color">
+                {% for value in veil_color_values %}
+                <option value="{{ value }}">{{ value }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <br>
+        <div>
+            <label for="ring_number">Ring Number:</label>
+            <select name="ring_number" id="ring_number">
+                {% for value in ring_number_values %}
+                <option value="{{ value }}">{{ value }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <br>
+        <div>
+            <label for="ring_type">Ring Type:</label>
+            <select name="ring_type" id="ring_type">
+                {% for value in ring_type_values %}
+                <option value="{{ value }}">{{ value }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <br>
+        <div>
+            <label for="spore_print_color">Spore Print Color:</label>
+            <select name="spore_print_color" id="spore_print_color">
+                {% for value in spore_print_color_values %}
+                <option value="{{ value }}">{{ value }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <br>
+        <div>
+            <label for="population">Population:</label>
+            <select name="population" id="population">
+                {% for value in population_values %}
+                <option value="{{ value }}">{{ value }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <br>
+        <div>
+            <label for="habitat">Habitat:</label>
+            <select name="habitat" id="habitat">
+                {% for value in habitat_values %}
+                <option value="{{ value }}">{{ value }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <br>
+
+        <button type="submit">Predict</button>
+    </form>
+
+    {% if prediction_decode %}
+    <h2>Prediction: {{ prediction_decode }}</h2>
+    {% endif %}
+
+</body>
+</html>
